@@ -84,13 +84,13 @@ const answers = [
  */
 function assessment(doraemon) {
   //全文字のコード番号を取得してそれを足し合わせる
-  let sum0fCharCode = 0;
+  let sumOfCharCode = 0;
   for (let i = 0; i < doraemon.length; i++) {
-    sum0fCharCode = sum0fCharCode + doraemon.charCodeAt(i);
+    sumOfCharCode = sumOfCharCode + doraemon.charCodeAt(i);
   }
 
   // 文字コード番号の合計を回答の数で割って添字の数値を求める
-  const index = sum0fCharCode % answers.length;
+  const index = sumOfCharCode % answers.length;
   let result = answers[index];
 
   result = result.replace(/\{doraemon\}/g, doraemon);
